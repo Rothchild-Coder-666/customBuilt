@@ -7,7 +7,6 @@ pragma solidity ^0.8.20;
     While participating in activities, users can separate property rights and use rights through freezing. For example, mortgage lending after freezing.
  */
 interface IAsset {
-    { symbol: "WETH", address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" };
    
     event Approve(address indexed _owner, address indexed _spender, address indexed _asset, uint256 _amount);
 
