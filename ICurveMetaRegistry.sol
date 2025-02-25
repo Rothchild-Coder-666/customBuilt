@@ -5,7 +5,7 @@ interface ICurveMetaRegistry {
 pragma solidity ^0.8.20;
 
 interface ICurveMetaRegistry {
-    function find_pool_for_coins(address _from, address _to) external view returns (address);
+    function find_pool_for_coins(address coin1, address coin2) external view returns (address);
     function get_coin_indices(address _pool, address _from, address _to) external view returns (int128, int128, bool);
     function get_base_pool(address _pool, uint256 _handler_id) external view returns (address);
     function is_meta(address _pool, uint256 _handler_id) external view returns (bool);
