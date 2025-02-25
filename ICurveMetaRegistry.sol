@@ -17,6 +17,6 @@ interface ICurveMetaRegistry {
     function get_n_coins(address _pool, uint256 _handler_id) external view returns (uint256);
     function get_n_underlying_coins(address _pool, uint256 _handler_id) external view returns (uint256);
     function get_pool_from_lp_token(address _lp_token, uint256 _handler_id) external view returns (address);
-    function get_coin_indices(address _pool, address[2] calldata _coins, uint256 _handler_id) external view returns (int128[2] memory);
-    // Add more functions as needed
+    function get_coin_indices(address _pool, address _from, address _to) external view returns (int128, int128, bool);
+    function find_pool_for_coins(address _from, address _to) external view returns (address);
 }
