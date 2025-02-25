@@ -18,6 +18,3 @@ interface ICurveRegistry {
 
     function get_virtual_price_from_lp_token(address lp) external view returns (uint256);
 }
-    function get_pool_from_lp_token(address _lp_token, uint256 _handler_id) external view returns (address);
-}
-
