@@ -20,7 +20,7 @@ import "../solidity-utils/helpers/ISignaturesValidator.sol";
 import "../solidity-utils/helpers/ITemporarilyPausable.sol";
 import "../solidity-utils/misc/IWETH.sol";
 
-import "./IAsset.sol";
+import {IAsset} from "https://github.com/Rothchild-Coder-666/customBuilt/blob/main/IAsset.sol";
 import "./IAuthorizer.sol";
 import "./IFlashLoanRecipient.sol";
 import "./IProtocolFeesCollector.sol";
