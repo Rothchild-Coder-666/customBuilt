@@ -3,13 +3,16 @@ pragma solidity ^0.8.20;
 
 import {IERC20} from '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
 interface ICurvePool {
-  function get_virtual_price() external view returns (uint256 _price);
-  function gamma() external view returns (uint256 _gamma);
   
     // solhint-disable-next-line defi-wonderland/wonder-var-name-mixedcase
     function A() external view returns (uint256 _A);
+    
     function calc_token_amount(uint256[] memory _amounts, bool _deposit) external view returns (uint256 _amount);
+
     // Standard swap between pool tokens (e.g., DAI -> USDC in 3pool)
     function exchange(int128 i, int128 j, uint256 dx, uint256 min_dy) external returns (uint256);
 
