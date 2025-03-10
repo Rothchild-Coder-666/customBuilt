@@ -6,11 +6,13 @@ interface ICurveRegistry {
 
   function get_coins(address pool) external view returns (address[8] memory);
 
+  function get_underlying_coins(address pool) external view returns (address[8]);
+
   function get_pool_from_lp_token(address lp) external view returns (address);
 
   function pool_list(uint256 id) external view returns (address);
 
-  function find_pool_for_coins(address _from, address _to)
+  function find_pool_for_coins(address _from, address _to, uint256 i)
         external
         view
         returns (address);
